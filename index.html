@@ -31,7 +31,7 @@
     <!-- Seção de Metas -->
     <section id="metas" class="section metas">
         <div class="section-header">
-            <h2>Nossas Metas</h2>
+            <h2>Nossos Objetivos</h2>
             <div class="underline"></div>
         </div>
         <div class="metas-grid">
@@ -40,10 +40,7 @@
                     <i class="fas fa-futbol"></i>
                 </div>
                 <h3>Chuteiras</h3>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 25%"></div>
-                </div>
-                <p class="meta-info">25% de R$ 5.000 alcançados</p>
+                <p class="meta-info">Precisamos de chuteiras para nossos alunos praticarem com segurança</p>
             </div>
             
             <div class="meta-card">
@@ -51,10 +48,7 @@
                     <i class="fas fa-tshirt"></i>
                 </div>
                 <h3>Uniformes</h3>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 15%"></div>
-                </div>
-                <p class="meta-info">15% de R$ 3.000 alcançados</p>
+                <p class="meta-info">Conjuntos completos para representação dos times</p>
             </div>
         </div>
     </section>
@@ -66,31 +60,12 @@
             <div class="underline"></div>
         </div>
         <div class="doacao-cards">
-            <div class="card doacao-mensal">
-                <div class="card-header">
-                    <h3>Doador Mensal</h3>
-                    <p class="valor">R$ 20/mês</p>
-                </div>
-                <ul class="beneficios">
-                    <li><i class="fas fa-check-circle"></i> Atualizações mensais</li>
-                    <li><i class="fas fa-check-circle"></i> Certificado digital</li>
-                    <li><i class="fas fa-check-circle"></i> Selo de apoiador</li>
-                </ul>
-                <button class="botao-doacao">
-                    <i class="fas fa-hand-holding-heart"></i> Assinar
-                </button>
-            </div>
-
             <div class="card doacao-unica destaque">
                 <div class="card-header">
-                    <h3>Doação Única</h3>
-                    <p class="valor">Qualquer valor</p>
+                    <h3>Contribua Agora</h3>
+                    <p class="valor">Sua ajuda faz a diferença!</p>
                 </div>
-                <ul class="beneficios">
-                    <li><i class="fas fa-check-circle"></i> Agradecimento público</li>
-                    <li><i class="fas fa-check-circle"></i> Relatório de uso</li>
-                    <li><i class="fas fa-check-circle"></i> Foto dos beneficiados</li>
-                </ul>
+                <p class="agradecimento">Seremos muito gratos pela sua contribuição!</p>
                 <button class="botao-doacao destaque">
                     <i class="fas fa-donate"></i> Doar Agora
                 </button>
@@ -99,7 +74,7 @@
     </section>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <footer class="footer" id="contato">
         <div class="redes-sociais">
             <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -108,5 +83,17 @@
         <p class="copyright">&copy; 2024 Chute Solidário - Escola [Nome da Escola]<br>
         Projeto de Incentivo ao Esporte Educacional</p>
     </footer>
+
+    <script>
+        // Adiciona scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
