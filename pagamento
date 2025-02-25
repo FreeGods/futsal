@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Doação - Chute Solidário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="bola-futsal.png" alt="Logo Chute Solidário" class="logo">
+                <h1 class="site-title">Chute Solidário</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página de Pagamento -->
+    <section class="section pagamento">
+        <div class="section-header">
+            <h2>Escolha sua Forma de Doação</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="metodos-pagamento">
+            <!-- QR Code -->
+            <div class="metodo-card">
+                <div class="icone-metodo">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>QR Code</h3>
+                <div class="qr-code-container">
+                    <img src="qr-code.png" alt="QR Code para Doação" class="qr-code">
+                </div>
+                <p class="instrucoes">Aponte a câmera do seu app de pagamento</p>
+            </div>
+
+            <!-- PIX -->
+            <div class="metodo-card">
+                <div class="icone-metodo">
+                    <i class="fas fa-pix"></i>
+                </div>
+                <h3>Chave PIX</h3>
+                <div class="pix-container" onclick="copiarChave()">
+                    <div class="chave-pix">
+                        <span id="chave-pix">chave.pix@escola.com</span>
+                        <span class="copiar-texto">Clique para copiar</span>
+                    </div>
+                </div>
+                <div id="feedback" class="feedback-copia">Chave copiada com sucesso!</div>
+                <p class="instrucoes">Cole no seu aplicativo bancário</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="redes-sociais">
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="copyright">&copy; 2024 Chute Solidário - Escola [Nome da Escola]</p>
+    </footer>
+
+    <script>
+        // Função para copiar chave PIX
+        function copiarChave() {
+            const chave = document.getElementById('chave-pix').innerText;
+            const feedback = document.getElementById('feedback');
+            
+            navigator.clipboard.writeText(chave).then(() => {
+                feedback.style.opacity = '1';
+                setTimeout(() => feedback.style.opacity = '0', 2000);
+            });
+        }
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
