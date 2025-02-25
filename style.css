@@ -147,18 +147,19 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .card {
     background: var(--cor-card);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 3rem 2.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--cor-borda);
     text-align: center;
+    width: 100%;
 }
 
 .card:hover {
@@ -170,18 +171,26 @@ body {
 }
 
 .card-header h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: var(--cor-secundaria);
-    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin: 2rem 0;
 }
 
 .botao-doacao {
-    background: var(--cor-secundaria); /* Alterado para azul */
+    background: var(--cor-secundaria);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
+    padding: 1.5rem 3rem;
+    border-radius: 30px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: background 0.3s;
     display: flex;
@@ -191,7 +200,7 @@ body {
 }
 
 .botao-doacao:hover {
-    background: #0066CC; /* Tom mais claro de azul */
+    background: #0066CC;
 }
 
 /* Rodapé */
@@ -235,7 +244,26 @@ body {
         font-size: 2rem;
     }
 
+    .card {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1.8rem;
+    }
+    
+    .card p {
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .botao-doacao {
+        padding: 1.2rem 2rem;
+        font-size: 1.2rem;
+    }
+    
     .doacao-cards {
-        grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
 }
