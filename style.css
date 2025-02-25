@@ -197,6 +197,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .botao-doacao:hover {
