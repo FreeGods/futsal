@@ -1,0 +1,93 @@
+/* Estilos específicos para pagamento.html */
+.pagamento {
+    text-align: center;
+}
+
+.metodos-pagamento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.metodo-card {
+    background: var(--cor-card);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    transition: transform 0.3s;
+}
+
+.metodo-card:hover {
+    transform: translateY(-5px);
+}
+
+.icone-metodo {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+
+.qr-code-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1.5rem auto;
+    max-width: 250px;
+}
+
+.qr-code {
+    width: 100%;
+    height: auto;
+}
+
+.pix-container {
+    background: var(--cor-fundo);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    border: 2px solid var(--cor-secundaria);
+    transition: all 0.3s;
+}
+
+.pix-container:hover {
+    border-color: var(--cor-primaria);
+}
+
+.chave-pix {
+    word-break: break-all;
+    font-size: 1.1rem;
+}
+
+.copiar-texto {
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.feedback-copia {
+    color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-top: 1rem;
+}
+
+.instrucoes {
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .metodos-pagamento {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .qr-code-container {
+        max-width: 200px;
+    }
+}
